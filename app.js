@@ -63,3 +63,4 @@ mongoose.connect(process.env.MONGOOSEURL).then(()=>{
 .catch(err=>{
     console.log(err)
 })
+module.exports = app;
