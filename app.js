@@ -33,7 +33,7 @@ app.use(passport.session());
 // console.log('Google Client ID:', process.env.GOOGLE_CLIENTID);
 //  console.log('Google Client Secret:', process.env.GOOGLE_CLIENT_SECRET);
 
-
+app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.set('view engine' ,'hbs');
