@@ -22,7 +22,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({mongoUrl: 'mongodb://127.0.0.1:27017/'})
+    store: MongoStore.create({mongoUrl: process.env.CLOUDMONGOOSE_URL})
 }))
 
 
@@ -53,7 +53,7 @@ const{isLoggedIn} = require('./middlewares/isLoggedIn');
 app.use('/shop',isLoggedIn ,shopRouter);
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/tanejagarments').then(()=>{
+mongoose.connect(process.env.CLOUDMONGOOSE_URL).then(()=>{
     app.listen(process.env.PORT,()=>{
         console.log(`http://localhost:`+process.env.PORT);
     
