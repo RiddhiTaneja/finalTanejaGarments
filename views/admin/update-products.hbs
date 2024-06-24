@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{<generalcss}}
+</head>
+<body>
+    {{>navbar}}
+
+    <h1>Welcome to update products page</h1>
+    <div class="my-product-image">
+    <img style="width: 200px;" src="{{product.imageUrl}}" alt="">
+    </div>
+       <form action="/admin/products/update" method="POST">
+        <input type="text" name="name" placeholder="Enter Product Name" value={{product.name}}> <br>
+        <input type="text" name="price" placeholder="Enter Product Price" value={{product.price}}> <br>
+        <input type="text" name="description" placeholder="Enter Description" value={{product.description}}> <br>
+        <input type="text" name="imageUrl" placeholder="Enter Product Image Url"value={{product.imageUrl}}> <br>
+        <input type="text" name="category" placeholder="Enter the category"> <br>
+        <input type="hidden" name="id"  value={{product._id}}> <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

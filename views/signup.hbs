@@ -1,0 +1,57 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/Css/loginpage.css">
+<body>
+    <div class="login-container">
+       <h1>Signup</h1>
+
+      {{msg}}
+    <form action="/signup" method="post">
+    <input type="text" name="username" placeholder="Enter Username"><br>
+    <input type="password" name="password" placeholder="Enter Password"> <br>
+    <button type="submit">Signup</button>
+    </form>
+<div>
+    <h4>Existing User? Login</h4>
+    <a href="/login">
+    <button>Login
+        </button>
+    </a>  
+     <h1>Login Via Google</h1>
+    <a href="/auth/google"><button>Login via google
+        </button>
+    </a>
+    </div>
+    </div>
+</body>
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="/Css/loginpage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Signup Page</h1>
+        {{msg}}
+        <form action="/signup" method="post">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Signup</button>
+        </form>
+        <div class="extra-links">
+            <a href="/login">Login</a>
+            <a href="/auth/google">Login via Google</a>
+        </div>
+    </div>
+</body>
+</html>

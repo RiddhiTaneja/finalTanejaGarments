@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {{>generalcss}}
+    <style>
+        .orderImage{
+                height: 150px;
+        }
+    .orderItem{
+          padding: 7px;
+    display: flex;
+    margin: 5%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center; 
+    align-items: flex-start;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px #ccc;
+    height: 150px;
+    column-gap: 15px;
+    background-color: #f2e8f1;
+}
+    .orderlist{
+        width: 50%;
+    margin: 10px;
+    list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    {{>navbar}}
+    <h1>welcome to order page</h1>
+<div class="orderlist">
+    {{#each orders as |order|}}
+        <div class="orderItem">
+            
+            <img src="{{order.product.imageUrl}}" alt="product-img" width="100px" >  <br>
+            <div class="productName">
+                 Price: {{order.product.price}} <br>
+                Description: {{order.product.description}} <br>
+           
+
+            <div class="orderDetails">
+                <div>
+                    Quanity: {{order.quantity}}
+                </div>
+                <div>
+                    Total Price: {{order.price}}
+                </div>
+            </div>
+        </div>
+         </div>
+    {{/each}}
+</div>
+    {{!-- {{>product product=product}} --}}
+</body>
+</html>

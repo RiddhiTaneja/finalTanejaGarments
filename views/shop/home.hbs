@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TanejaGarments Shop</title>
+    <style>
+    .product-list{
+      display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    width: 100%;
+    padding: 1%;
+    margin: 0px;
+    row-gap: 11px;
+    color: #ecf0f1;
+    /* margin-left: 11px; */
+    column-gap: 1%;
+    margin-right: 15px;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    {{!-- border-bottom: none; --}}
+    margin-right: 0;
+    }
+    .product-item{
+          box-shadow: 5px 10px 10px #ccc;
+               background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    width: 270px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+        box-shadow: 5px 10px 10px #ccc;
+        height: 550px;
+    }
+    .product-item:.price{
+        font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    font-weight: bold;
+    }
+    .category{
+        width: 100%;
+            background: linear-gradient(90deg, #FFFDD0, rgba(0, 0, 0, .2));
+    }
+    .product-item:.add-to-cart , .details{
+         display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    
+    }
+    .add-to-cart ,.details{
+            {{!-- background: linear-gradient(90deg,#2ecc71 ,#FFFDD0); --}}
+    font-family: serif;
+    font-weight: bold;
+
+    }
+    .categorykey{
+        font-size: 25px;
+        font-family: sans-serif;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border: 1px solid black;
+    }
+
+    </style>
+    {{>generalcss}}
+</head>
+<body>
+
+    {{>navbar}}
+    {{!-- <h1>Welcome to the Shop</h1> --}}
+
+    {{>shop_category_list products=products}}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+</body>
+</html>

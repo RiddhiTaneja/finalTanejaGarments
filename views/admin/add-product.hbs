@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add product</title>
+   
+    {{>generalcss}}
+</head>
+<body>
+
+      {{>navbar}}
+    {{!-- <h1>Welcome to the New Add prdoucts page</h1> --}}
+  
+
+
+    <form action="/admin/products/add" method ="POST">
+    
+    <input type="text" name="name" placeholder="Enter Product Name"> <br>
+    <input type="text" name="price" placeholder="Enter Product Price"> <br>
+    <input type="text" name="description" placeholder="Enter description here"> <br>
+    <input type="text" name="imageUrl" placeholder="Enter Products imageUrl"> <br>
+    <input type="text" name="category" placeholder="Enter the category"> <br>
+     <button type="submit">Submit</button>    
+    </form>
+</body>
+</html>

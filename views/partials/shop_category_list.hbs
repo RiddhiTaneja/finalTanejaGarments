@@ -1,0 +1,36 @@
+
+<div class="category">
+   {{#each products as |category|}}
+   {{!-- <div class="categorykey">  --}}
+      {{@key}}
+    
+    <div class="product-list">
+    
+    {{#each category as |p|}}
+   <a class="productLink" href="/shop/product/details/{{p._id}}">
+   <div class="product-item">
+     <div class="my-product-image">
+    <img src={{p.imageUrl}}>
+    </div> <br>
+    <h4 class="name">Product Name:{{p.name}}</h4>
+    <p class="price">Products Price:{{p.price}}</p>
+    
+    <div class="button-group">
+    <a href="/shop/cart/add/{{p._id}}">
+    <button class="add-to-cart">Add To Cart</button>
+    </a>
+    <a href="/shop/products/{{p.id}}">
+    <button class=" details">Details</button>
+    </a>
+    </div>
+    
+ 
+    </div>
+ </a>
+    {{/each}}
+     {{!-- </div> --}}
+ {{!-- <a href="view-all">View All</a> --}}
+</div>
+{{/each}}
+</div>
+
