@@ -53,7 +53,7 @@ const{isLoggedIn} = require('./middlewares/isLoggedIn');
 app.use('/shop',isLoggedIn ,shopRouter);
 
 
-mongoose.connect(process.env.MONGOOSEURL).then(()=>{
+mongoose.connect('mongodb://127.0.0.1:27017/tanejagarments').then(()=>{
     app.listen(process.env.PORT,()=>{
         console.log(`http://localhost:`+process.env.PORT);
     
