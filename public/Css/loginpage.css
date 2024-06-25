@@ -3,13 +3,14 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #e9eff4;
- /* background: repeating-linear-gradient( */
-        /* 45deg,
+ /* background: repeating-linear-gradient( 
+         45deg,
         #ff7e5f,
         #ff7e5f 10px,
         #feb47b 10px,
         #feb47b 20px
     ); */
+    background: linear-gradient(90deg, #FFFDD0, rgba(0, 0, 0, .2));
     display: flex;
     justify-content: center;
     align-items: center;
