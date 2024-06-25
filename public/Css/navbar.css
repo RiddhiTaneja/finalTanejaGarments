@@ -13,7 +13,7 @@ nav{
     border-left: none ;
     border-right: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #FFFDD0, rgba(0, 0, 0, .2));
+    background: #987284;
 }
 
 nav a{
@@ -22,11 +22,11 @@ nav a{
 
 nav a:link{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 nav a:visited{
-    color: black;
+    color: white;
 }
 
 nav a:hover{

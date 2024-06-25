@@ -2,13 +2,10 @@
 <div class="card">
    {{#each products as |category|}}
    <div class="card-header">
-    <div><a href="#">{{@key}} </a></div>
+    <div>{{@key}}</div>
        <div><a href="#">ViewAll</a></div>
        </div>
        <div class="card-body">
-    
-
-    {{#each category as |p|}}
    <a class="productLink" href="/shop/product/details/{{p._id}}">
    <div class="product-item">
      <div class="my-product-image">
@@ -26,7 +23,7 @@
     </div>
     </div>
  </a>
-    {{/each}}
+    
  
 </div>
 {{/each}}
