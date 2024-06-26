@@ -6,7 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+<style>
+    .product-item{
+    background-color: #f2e8f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1px;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 1px;
+    padding-bottom: 4%;
+    padding-left: 0;
+    padding-right: 1pt;
 
+    width: 99%;
+    text-align: center;
+    box-shadow: 5px 10px 10px #ccc;
+    height: auto;
+    }
+</style>
     {{>generalcss}}
 </head>
 
@@ -25,14 +44,21 @@
        
         <h4>Product Description: {{product.description}}</h4>
        
-    </div>
-
+    
     <a href="/shop/cart/add/{{product._id}}">
-        <button>Add To Cart</button>
+        <button class="add-to-cart" style="    background: #987284;
+    font-family: serif;
+    font-weight: bold;
+}">Add To Cart</button>
     </a>
     <a href="/shop/cart/buy">
-        <button>Buy Now</button>
+        <button class="buy-now" style="    background: #987284;
+    font-family: serif;
+    font-weight: bold;
+}">Buy Now</button>
     </a>
+    </div>
+
 </body>
 
 </html>

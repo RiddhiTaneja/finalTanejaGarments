@@ -18,18 +18,20 @@
 
         }
 
-        .cart-list-item {
-        padding: 7px;
+        .cart-list {
+            width: auto;
+            padding: 7px;
     display: flex;
+    flex-wrap: wrap;
     margin: 5%;
-    flex-direction: row;
-    /* justify-content: flex-start; */
+    flex-direction: column;
+    align-content: flex-start; 
     align-items: center;
     border: 1px solid #dddddd;
     border-radius: 5px;
     box-shadow: 5px 10px 10px #ccc;
-    height: 186px;
-    column-gap: 15px;
+    height: auto;
+    row-gap: 15px;
     background-color: #f2e8f1;
 }
 
@@ -52,7 +54,8 @@
             cursor: pointer;
         }
         .cartimg{
-            height: 150px;
+            height: auto;
+            
         }
     </style>
 </head>
@@ -60,8 +63,9 @@
     {{>navbar}}
    
     {{!-- <h1>Welcome to the Cart</h1> --}}
-Total Price: <span class="totalPrice">{{totalPrice}}</span>
+
     <ul class="cart-list">
+         <span class="totalPrice"> Total Price: {{totalPrice}}</span>
         {{#each cart as |c| }}
         <li class="cart-list-item">
             <div class="cartimg">
@@ -88,13 +92,13 @@ Total Price: <span class="totalPrice">{{totalPrice}}</span>
         </li>
           
         {{/each}}
-    </ul>
+    
  <a href="/shop/cart/buy">
         <button class="buyNowBtn">
             Buy Now
         </button>
     </a>
-  
+  </ul>
    
 <script src="/js/utils1/axois.min.js"></script>
 <script src="/js/cart.js"></script>
