@@ -41,8 +41,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'public')));
 
 const homeRouter = require('./routes/home');
-app.use('/', homeRouter)
-;
+app.use('/', homeRouter);
 
 const adminRouter = require('./routes/admin');
 const{isAdmin} = require('./middlewares/isAdmin');

@@ -4,22 +4,25 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const Users = require('../models/user');
 const { isLoggedIn } = require('../middlewares/isLoggedIn');
-
+const { isAdmin } = require('../middlewares/isAdmin');
 
 module.exports.getLogin = (req,res,next)=>{
     if(req.isAuthenticated()) return res.redirect('/profile');
     res.render('login');
 }
+
 module.exports.getHome = async(req,res,next)=>{
-    if(!req.isAuthenticated()) return res.redirect('/login');
-    else
+    // if(!req.isAuthenticated()) return res.redirect('/login');
+    // else
     try{
         let products = await Products.find();
         const {getProductsCategoryWise} = require('../utils/library');
         products = getProductsCategoryWise(products);
+        // const isLoggedIn = req.isAuthenticated();
+        // const isAdmin = req.user && req.user.role === 'admin';
         res.render('index',{
             products,
-            isAdmin:(req.user.role =='admin')?true:false,
+            // isAdmin:(req.user.role ==='admin')?true:false,
             isLoggedIn: true
         });
     }
