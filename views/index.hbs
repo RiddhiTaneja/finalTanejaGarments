@@ -26,28 +26,26 @@
     {{!-- border-bottom: none; --}}
     margin-right: 0;
     }
-    .product-item{
-       
-               background-color: #f2e8f1;
+    .product-item{    
+    background-color:#f9f4e1 ;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 15px;
     padding: 15px;
     width: 270px;
-    
     text-align: center;
-        box-shadow: 5px 10px 10px #ccc;
-        height: 550px;
+    box-shadow: 5px 10px 10px #ccc;
+    height: 550px;
     }
     .product-item:.price{
-        font-size: 16px;
+    font-size: 16px;
     color: #555;
     margin: 5px 0;
     font-weight: bold;
     }
     .category{
         width: 100%;
-            background: white
+            background: #f9f4e1
     }
     .product-item:.add-to-cart , .details{
          display: inline-block;
@@ -59,19 +57,25 @@
     
     }
     .add-to-cart ,.details{
-          background: #987284;
+           background: #6e4e37;
     font-family: serif;
     font-weight: bold;
+    color: white;
 
     }
     .categorykey{
         font-size: 25px;
-        font-family: sans-serif;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         border-top: none;
         border-left: none;
         border-right: none;
         border: 1px solid black;
     }
+    body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f9f4e1;  
+}
+
 
 </style>
     {{>generalcss}}
@@ -79,6 +83,7 @@
 </head>
 <body>
     {{>navbar}}
+  
     {{!-- <h1>Welcomt to the E-commerce Site</h1> --}}
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -91,13 +96,13 @@
   
   <!-- The slideshow/carousel -->
   <div class="carousel-inner">
-    <div class="carousel-item active" style="height:550px;">
+    <div class="carousel-item active" style="height:auto;">
       <img src="/imgeee/Home.png" alt="Los Angeles" class="d-block" style="width:100%">
     </div>
-     <div class="carousel-item" style= "height:550px;">
+     <div class="carousel-item" style= "height:auto;">
       <img src="/imgeee/About.png" alt="Chicago" class="d-block w-100">
     </div>
-    <div class="carousel-item" style="height:550px;">
+    <div class="carousel-item" style="height:auto;">
       <img src="/imgeee/Contact.png" alt="New York" class="d-block w-100">
     </div>
   </div>
@@ -111,6 +116,7 @@
   </button>
 </div>
 
+  {{>2navbar}}
 
 {{>indexCardProductlist product=product}}
 

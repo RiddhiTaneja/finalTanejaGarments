@@ -1,16 +1,12 @@
   <nav>
-   
    <a href="/shop">Taneja Garments</a>
-
-   
-      {{!-- <a href="/search">🔍</a> --}}
+   <a href="/search">🔍</a>
    {{#if isAdmin}}
     <a href="/admin">Admin</a>
     {{/if}}
    <a href="/shop/cart">🛒</a>
+   <a href="/like">🤍</a>
    <a href="/shop/order/history">Orders</a>
-   
-
    {{#if isAuthenticated}}
    <a href="/logout">Logout</a>
    {{else}}

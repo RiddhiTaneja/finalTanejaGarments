@@ -32,7 +32,8 @@
     box-shadow: 5px 10px 10px #ccc;
     height: auto;
     row-gap: 15px;
-    background-color: #f2e8f1;
+    {{!-- background-color:  --}}
+    background: #f9f4e1;
 }
 
         .increaseQuantity a:link,
@@ -47,7 +48,7 @@
             padding: 10px;
             border-radius: 10px;
             border: none;
-            background-color: #987284;
+            background-color:#d4a373;
             color: #fff;
             font-size: 18px;
             font-weight: 600;
@@ -78,7 +79,7 @@
     {{!-- box-shadow: 5px 10px 10px #ccc; --}}
     height: auto;
     /* row-gap: 15px; */
-    background-color: #987284;
+    background-color: #d4a373;
     color: white;
         }
     </style>
@@ -100,7 +101,7 @@
             <div>
                 <p>Name:{{c.id.name}}</p>
                 <p>Price:{{c.id.price}}</p>
-             <div>
+             <div> 
             Quantity:
             <a href="shop/cart/increase/{{c.id._id}}">
             <button class="increaseQuantity">+</button>
