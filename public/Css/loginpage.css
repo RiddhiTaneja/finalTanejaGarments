@@ -18,7 +18,7 @@ body {
     height: 100vh;
 }
 h1, h4 {
-    color: #987284;
+    color: white;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@ a:hover {
     width: auto;
     max-width: 400px;
     text-align: center;
-    background-color: #f2e8f1;
+    background-color: #6e4e37;
 
 }
 
