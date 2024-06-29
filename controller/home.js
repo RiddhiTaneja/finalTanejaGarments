@@ -7,7 +7,7 @@ const { isLoggedIn } = require('../middlewares/isLoggedIn');
 const { isAdmin } = require('../middlewares/isAdmin');
 
 module.exports.getLogin = (req,res,next)=>{
-    if(req.isAuthenticated()) return res.redirect('/profile');
+    // if(req.isAuthenticated()) return res.redirect('/profile');
     res.render('login');
 }
 

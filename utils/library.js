@@ -1,5 +1,6 @@
 
 module.exports.getProductsCategoryWise = function (products) {
+    
     let data = {};
 
     products.forEach(product => {

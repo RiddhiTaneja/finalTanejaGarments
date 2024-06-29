@@ -3,9 +3,8 @@
    {{#each products as |category|}}
    {{!-- <div class="categorykey">  --}}
       {{@key}}
-    
-    <section class="product-list">
-    
+
+    <section class="product-list"> 
     {{#each category as |p|}}
    <a class="productLink" href="/shop/product/details/{{p._id}}">
    <div class="product-item">
@@ -28,9 +27,11 @@
  
     </div>
  </a>
+     <a href="view-all">View All</a>
     {{/each}}
+ 
      </section>
- {{!-- <a href="view-all">View All</a> --}}
+
 {{!-- </div> --}}
 {{/each}}
 </div>

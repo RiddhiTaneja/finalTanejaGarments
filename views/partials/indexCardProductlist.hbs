@@ -1,10 +1,10 @@
 
 <div class="category">
    {{#each products as |category|}}
-   {{!-- <div class="categorykey">  --}}
+   <div class="me-auto container border border-light-subtle mb-2"> 
       {{@key}}
-    
-    <section class="product-list">
+      <a href="view-all">View All</a>
+    <section class="d-flex flex-wrap justify-content-center">
     
     {{#each category as |p|}}
    <a class="productLink" href="/shop/product/details/{{p._id}}">
@@ -27,10 +27,12 @@
  
     </div>
  </a>
+ 
     {{/each}}
+   
      </section>
- {{!-- <a href="view-all">View All</a> --}}
-{{!-- </div> --}}
+
+</div>
 {{/each}}
 </div>
 
