@@ -8,12 +8,14 @@ nav{
     column-gap: 3%;
     border: 1px solid black;
     padding: 10px;
-    background-color: #f2e8f1;
+    /* background-color: #f2e8f1; */
     border-top: none;
     border-left: none ;
     border-right: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #6e4e37;
+    /* background: #d4a373;
+     */
+     background: #d4a373;
 }
 
 nav a{

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
 <style>
+
     .product-item{
-    background-color: #f2e8f1;
+    background-color: whitesmoke;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 1px;
@@ -18,13 +19,13 @@
     padding: 1px;
     padding-bottom: 4%;
     padding-left: 0;
-    padding-right: 1pt;
-
-    width: 99%;
+    padding-right: 1pt; 
+    }
+    .my-product-image{
+         {{!-- width: 20%; --}}
     text-align: center;
     box-shadow: 5px 10px 10px #ccc;
     height: auto;
-    
     }
     .buy-now{
         display: inline-block;
@@ -44,8 +45,8 @@
     {{>navbar}}
     {{!-- <h1>Welcome to TG Shop</h1> --}}
 
-    <div class="product-item">
-        <div class="my-product-image">
+    <div class="product-item d-flex flex-column justify-content-center align-items-center">
+        <div class="my-product-image flex-shrink-0 w-20">
             <img src={{product.imageUrl}}>
         </div>
         <br>
@@ -56,19 +57,25 @@
        
     
     <a href="/shop/cart/add/{{product._id}}">
-        <button class="add-to-cart" style="    background: #987284;
+    <div>
+        <button class="add-to-cart border border-secondary-subtle" style="    background: #d4a373;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }">Add To Cart</button>
     </a>
     <a href="/shop/cart/buy">
-        <button class="buy-now" style="    background: #987284;
+        <button class="buy-now border border-secondary-subtle" style="    background: #d4a373;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
 }">Buy Now</button>
     </a>
     </div>
+    </div>
 
+
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

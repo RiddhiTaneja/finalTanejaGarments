@@ -16,9 +16,11 @@ const Users = require('../models/user');
 // }
 
 module.exports.getProductsById = async (req, res, next) => {
+    const category = req.query.category;
+    const limit = parseInt(req.query.limit) || 4;
     try {
         const { id } = req.params;
-        let product = await Products.findOne({ _id: id });
+        let product = await Products.findOne({ _id: id }).limit(limit);
         res.render('shop/product-details', {
             product: product,
             isLoggedIn:true ,

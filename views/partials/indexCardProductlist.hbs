@@ -1,11 +1,11 @@
 
 <div class="category">
    {{#each products as |category|}}
-   <div class="me-auto container border border-light-subtle mb-2"> 
-      {{@key}}
-      <a href="view-all">View All</a>
+   <div class="me-auto container border-bottom border-light-subtle mb-2"> 
+    <div class="d-flex justify-content-between">
+      <span class="btn border border-secondary-subtle" style="background-color: #d4a373;color:white; margin:1%">{{@key}}</span>
+     <a href="view-all" role="button" class="btn border border-secondary-subtle rounded-pill" style="background-color: #d4a373;color:white; margin:1%">View All</a></div>
     <section class="d-flex flex-wrap justify-content-center">
-    
     {{#each category as |p|}}
    <a class="productLink" href="/shop/product/details/{{p._id}}">
    <div class="product-item">
@@ -17,10 +17,10 @@
     
     <div class="button-group">
     <a href="/shop/cart/add/{{p._id}}">
-    <button class="add-to-cart">Add To Cart</button>
+    <button class="add-to-cart border border-secondary-subtle">Add To Cart</button>
     </a>
     <a href="/shop/products/{{p.id}}">
-    <button class=" details">Details</button>
+    <button class=" details border border-secondary-subtle">Details</button>
     </a>
     </div>
     
