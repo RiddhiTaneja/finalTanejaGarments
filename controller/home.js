@@ -33,7 +33,7 @@ module.exports.getHome = async(req,res,next)=>{
 }
 
 module.exports.getSignup= (req,res,next)=>{
-    if(req.isAuthenticated()) return res.redirect('/profile');
+    // if(req.isAuthenticated()) return res.redirect('/profile');
     res.render('signup');
 };
 

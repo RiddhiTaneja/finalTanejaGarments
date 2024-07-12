@@ -4,7 +4,7 @@
    <div class="me-auto container border-bottom border-light-subtle mb-2"> 
   <div class="d-flex justify-content-between">
       <span class="btn border border-secondary-subtle" style="background-color: #d4a373; margin:1%; color:white ">{{@key}}</span>
-     <a href="/shop/all-products?category={{@key}}" role="button" class="btn border border-secondary-subtle rounded-pill" style="background-color: #d4a373; color:white; margin:1%">View All {{@key}}</a></div>
+     <a href="/shop/all-products?category={{@key}}" role="button" class="btn border border-secondary-subtle rounded-pill" style="background-color: #d4a373; color:white; margin:1%" data-category="{{p.name}}">View All {{@key}}</a></div>
     <section class="d-flex flex-wrap justify-content-center">
     {{#each category as |p|}}
    <a class="productLink" href="/shop/product/details/{{p._id}}">

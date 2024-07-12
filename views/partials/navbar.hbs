@@ -22,9 +22,9 @@
     <a href="/admin">ADMIN</a>
     {{/if}}
    <a href="/shop/cart">🛒</a>
-   <a href="/like">🤍</a>
+   {{!-- <a href="/like">🤍</a> --}}
    <a href="/shop/order/history">ORDERS</a>   
-    {{#if isLoggedIn}}
+    {{#if isAuthenticated}}
     <a href="/logout">Logout</a>
     {{else}}
     <a href="/login">Login</a>
