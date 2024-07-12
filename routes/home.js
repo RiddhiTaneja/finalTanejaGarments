@@ -36,4 +36,6 @@ router.post('/login',
 
     router.post('/signup' ,homeController.postSignup);
     
+    router.get('/search', homeController.search);
+    
     module.exports = router;

@@ -7,6 +7,7 @@ const {isLoggedIn} = require('../middlewares/isLoggedIn');
 
 router.get('/' ,shopController.getHome)
 
+// router.get('/all-products', shopController.getAllProducts);
 // router.get('/products/all' , shopController.getProductsAll);
 router.get('/products/:id' ,shopController.getProductsById);
 
@@ -17,5 +18,6 @@ router.get('/cart/decrease/:id' ,shopController.getDecrease);
 router.get('/cart/buy', shopController.getCartBuy);
 router.get('/order/history', shopController.getOrderHistory);
 router.get('/product/details/:id', shopController.getProductDetails);
+
 
 module.exports = router;

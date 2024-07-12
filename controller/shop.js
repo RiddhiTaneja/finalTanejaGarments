@@ -2,6 +2,51 @@ const { isAdmin} = require('../middlewares/isAdmin');
 const {isLoggedIn} = require('../middlewares/isLoggedIn');
 const Products = require('../models/products');
 const Users = require('../models/user');
+const Category = require('../models/category');
+
+
+// module.exports.getHome = async (req, res, next) => {
+//     try {
+//         const categories = await Category.find({});
+//         let categoryProducts = {};
+
+//         for (let category of categories) {
+//             let products = await Products.find({ category: category.name }).limit(3);
+//             categoryProducts[category.name] = products;
+//         }
+
+//         res.render('shop/home', {
+//             categoryProducts,
+//             isLoggedIn: true,
+//             isAdmin: (req.user && req.user.role == 'admin') ? true : false
+//         });
+//     } catch (err) {
+//         next(err);
+//     }
+// };
+
+// module.exports.getAllProducts = async (req, res, next) => {
+//     const category = req.query.category;
+//     try {
+//         let products;
+//         if (category) {
+//             products = await Products.find({ category });
+//         } else {
+//             products = await Products.find({});
+//         }
+
+//         res.render('shop/all-products', {
+//             category,
+//             products,
+//             isLoggedIn: true,
+//             isAdmin: (req.user && req.user.role == 'admin') ? true : false
+//         });
+//     } catch (err) {
+//         next(err);
+//     }
+// };
+
+// Other controller methods...
 
 
 // module.exports.getProductsAll = async (req, res, next) => {

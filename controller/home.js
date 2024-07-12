@@ -5,6 +5,7 @@ const saltRounds = 10;
 const Users = require('../models/user');
 const { isLoggedIn } = require('../middlewares/isLoggedIn');
 const { isAdmin } = require('../middlewares/isAdmin');
+const products = require('../models/products');
 
 module.exports.getLogin = (req,res,next)=>{
     // if(req.isAuthenticated()) return res.redirect('/profile');
@@ -66,3 +67,22 @@ module.exports.postSignup = async (req,res,next)=>{
         next(err);
     }
 }
+module.exports.search = async (req, res) => {
+    const { getProductsCategoryWise } = require('../utils/library');
+    try {
+        const query = req.query.q;
+        console.log("Search query:", query); // Debug statement
+    
+        const product = await products.search(query);
+        console.log("Search results:", product); // Debug statement
+    
+        const categorizedProducts = getProductsCategoryWise(product);
+        console.log("Categorized products:", categorizedProducts); // Debug statement
+    
+        res.render('searchResults', { product: categorizedProducts });
+      } catch (error) {
+        console.error("Error during search:", error);
+        res.status(500).send(error);
+      }
+    }
+ 

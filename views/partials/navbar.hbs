@@ -1,9 +1,9 @@
-  <nav>
-     <div class="container">
+  <nav class="navbar">
+     <div class="conatiner" >
     <a class="navbar-brand" href="/shop">
       <img src="/imgeee/logo.png-removebg-preview.png" alt="" width="30" height="24">
     </a>
-  </div>
+  
    {{!-- <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -11,12 +11,22 @@
     </form>
 </div> --}}
    <a href="/shop">HOME</a>
-   <a href="/search"></a>
+   </div>
+   <div class="conatiner-fluid">
+   <form class="d-flex" action="/search" method="get">
+  <input class="form-control me-2" type="text" name="q" placeholder="Search product" aria-label="Search">
+  <button class="btn" type="submit" style="border: none; background: none" >🔎</button>
+</form>
+</div>
    {{#if isAdmin}}
     <a href="/admin">ADMIN</a>
     {{/if}}
    <a href="/shop/cart">🛒</a>
    <a href="/like">🤍</a>
    <a href="/shop/order/history">ORDERS</a>   
-    <a href="/login">LOGIN</a>
+    {{#if isLoggedIn}}
+    <a href="/logout">Logout</a>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
 </nav>
