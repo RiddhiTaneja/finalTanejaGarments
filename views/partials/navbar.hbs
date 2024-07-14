@@ -1,32 +1,22 @@
-  <nav class="navbar">
-     <div class="conatiner" >
+<nav class="navbar">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/shop">
-      <img src="/imgeee/logo.png-removebg-preview.png" alt="" width="30" height="24">
-    </a>
-  
-   {{!-- <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn" type="submit">🔎</button>
-    </form>
-</div> --}}
-   <a href="/shop">HOME</a>
-   </div>
-   {{!-- <div class="conatiner-fluid"> --}}
-   <form class="d-flex" action="/search" method="get">
+      <img src="/imgeee/logo.png-removebg-preview.png" alt="" width="30" height="30">HOME
+      </a>
+          
+      <span class="navbar">
+    <form class="d-flex" action="/search" method="get">
   <input class="form-control me-2" type="text" name="q" placeholder="Shirt" aria-label="Search" style="width:40%;">
   <button class="btn" type="submit" style="border: none; background: none width:auto" >🔎</button>
 </form>
-{{!-- </div> --}}
-   {{#if isAdmin}}
-    <a href="/admin">ADMIN</a>
-    {{/if}}
-   <a href="/shop/cart">🛒</a>
-   {{!-- <a href="/like">🤍</a> --}}
-   <a href="/shop/order/history">ORDERS</a>   
+  <a class="nav-link" href="/shop/cart">🛒</a>
+  <a class="nav-link" href="/shop/order/history">ORDERS</a>
     {{#if isAuthenticated}}
     <a href="/logout">Logout</a>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
+      </span>
+   
+  </div>
 </nav>
