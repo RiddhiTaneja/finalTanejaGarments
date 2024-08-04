@@ -8,13 +8,13 @@ nav{
     column-gap: 3%;
     border: 1px solid black;
     padding: 10px;
-    background-color: #f2e8f1;
+    background-color: white;
     border-top: none;
     border-left: none ;
     border-right: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* background: #d4a373; */
-    background: #d4a373;
+    /* background: #d4a373; */
 }
 
 nav a{
@@ -23,11 +23,11 @@ nav a{
 
 nav a:link{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 nav a:visited{
-    color: white;
+    color: black;
 }
 
 nav a:hover{
@@ -42,5 +42,6 @@ nav a:hover{
 }
 body{
     font-family: Arial, sans-serif;
-    background-color: #f9f4e1;  
+    background-color: white;  
 }
+
